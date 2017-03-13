@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="./style.css">
+
+<body>
+	<div class="wrap">
+		<div class="main">
+			<div id="facegroup">
+				<div class="face face1"></div>
+				<div class="face face2"></div>
+				<div class="face face3"></div>
+				<div class="face face4"></div>
+				<div class="face face5"></div>
+				<div class="face face6"></div>
+				<div id="dna">
+					<div id="scope">
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+						<div class="item"><span class="left"></span><span class="middle"></span><span class="right"></span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="op">
+			<p>Xdeg: <span id="xdeg"></span></p>
+			-360<input type="range" id="rotatex" value="0" min="-360" max="360" onchange="changePosition()" />360<br/>
+			<p>Ydeg: <span id="ydeg"></span></p>
+			-360<input type="range" id="rotatey" value="0" min="-360" max="360" onchange="changePosition()"/>360<br/>
+			<p>Zdeg: <span id="zdeg"></span></p>
+			-360<input type="range" id="rotatez" value="0" min="-360" max="360" onchange="changePosition()"/>360
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		document.getElementById("facegroup").style.MozTransform="rotateX("+10+"deg) rotateY("+10+"deg) rotateZ("+(-2)+"deg)"
+		function changePosition(){
+			var x=document.getElementById("rotatex").value;
+			var y=document.getElementById("rotatey").value;
+			var z=document.getElementById("rotatez").value;
+			document.getElementById("xdeg").innerHTML=x;
+			document.getElementById("ydeg").innerHTML=y;
+			document.getElementById("zdeg").innerHTML=z;
+			document.getElementById("facegroup").style.webkitTransform="rotateX("+x+"deg) rotateY("+y+"deg) rotateZ("+z+"deg)"
+			document.getElementById("facegroup").style.MozTransform="rotateX("+x+"deg) rotateY("+y+"deg) rotateZ("+z+"deg)"
+		}
+
+
+		var items=document.getElementsByClassName("item");
+		var adeg=0;
+		for(i=0; i<items.length; i++){
+			items[i].style.webkitTransform="rotateY("+adeg+"deg)";
+			items[i].style.MozTransform="rotateY("+adeg+"deg)";
+			adeg=adeg+20;
+		}
+</script>
+</body>
+</html>
