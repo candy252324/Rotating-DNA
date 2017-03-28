@@ -31,43 +31,32 @@ html,body{
 	-webkit-transform-origin: 50% 50%;
 	-moz-transform-origin: 50% 50%;	
 }
-#dna{
+.dna{
 	width: 66px;
 	margin:0 auto;
-	-webkit-transform: rotateZ(-60deg);
-	-moz-transform: rotateZ(-60deg);
-	-o-transform: rotateZ(-60deg);
+}
 
-}
-#scope{
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	-o-transform-style: preserve-3d;
-	-webkit-animation: allchange 10s linear infinite;
-	-moz-animation: allchange 10s linear infinite;
-	-o-animation: allchange 10s linear infinite;
-}
 .item{
-	height: 11px;
 	-webkit-transform-origin:50% 50% ;
 	-moz-transform-origin:50% 50% ;
 	-o-transform-origin:50% 50% ; 
+	height: 6px;
+	vertical-align: middle;
 }
 .left,.right{
 	display: inline-block;
-	width:8px;
-	height: 8px;
-	border-top: 1px solid #fff;
+	width:6px;
+	height: 6px;
 	border-radius: 50%;
-	background-image:linear-gradient(to bottom,#1f23ff,#aaa);
+	background: #1f23ff;
 }
 .middle{
+	position: relative;
+	top:-2px;
 	display: inline-block;
 	width:50px;
 	height: 2px;
-	border-top:1px solid #eee;
 	background-color: #0951d7;
-	vertical-align: middle;
 }
 
 @-webkit-keyframes allchange{
@@ -137,12 +126,4 @@ html,body{
 .face6{
 	-webkit-transform: translateZ(-125PX);
 	-moz-transform: translateZ(-125PX);
-}
-.op{
-	width: 500px;
-	margin:150px auto 0;
-	color:#fff;
-}
-.op input{
-	width: 400px;
 }
